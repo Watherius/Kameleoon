@@ -1,4 +1,5 @@
-@import 'variables';
+@use 'variables' as *;
+@use 'sass:color';
 
 #root {
 	height: 100vh;
@@ -210,7 +211,7 @@ body {
 		color: $color-white;
 
 		&:hover {
-			background-color: darken($color-emerald-500, 5%);
+			background-color: color.adjust($color-emerald-500, $lightness: 5%);
 		}
 	}
 
@@ -219,7 +220,7 @@ body {
 		color: $color-white;
 
 		&:hover {
-			background-color: darken($color-gray-600, 5%);
+			background-color: color.adjust($color-gray-600, $lightness: 5%);
 		}
 	}
 
@@ -230,7 +231,7 @@ body {
 		border-radius: $border-radius-lg;
 
 		&:hover {
-			background-color: darken($color-emerald-300, 5%);
+			background-color: color.adjust($color-emerald-300, $lightness: 5%);
 		}
 	}
 }
