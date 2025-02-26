@@ -5,7 +5,9 @@
 - [Мой Telegram](https://t.me/Elder1y)
 
 ## Для работы с локальным проектом необходимо
-- Глобально установить менеджер пакетом pnpm: ```npm install -g pnpm```
+- Клонировать репозиторий на локальную машину: ```git clone https://github.com/Watherius/Kameleoon.git```
+- Перейти в папку приложения: ```cd Kameleoon```
+- Глобально установить менеджер пакетов pnpm: ```npm install -g pnpm```
 - Установить зависимости: ```pnpm install```
 - Запустить приложение через сборщик vite: ```pnpm vite```
 
