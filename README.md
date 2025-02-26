@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Тестовое задание для Kameleoon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Автор тестового задания: Орлов Илья
+- [Моя hh](https://hh.ru/resume/330e7adcff0c380a520039ed1f447869784436)
+- [Мой Telegram](https://t.me/Elder1y)
 
-Currently, two official plugins are available:
+## О проекте
+Этот проект я разрабатывал для работы с внешним API, используя React, TypeScript и SCSS.  
+Основная идея — удобная система отображения, сортировки и фильтрации тестов с привязкой к разным сайтам.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Что было сделано:
+- Использовал React + TypeScript, чтобы код был более предсказуемым и масштабируемым.
+- Применил SCSS для удобной модульности и переиспользуемости стилей.
+- Использовал Axios, чтобы получать данные о тестах и сайтах с сервера.
+- Настроил React Router для удобной навигации по приложению.
+- Реализовал сортировку тестов по статусу, имени и типу, а также поиск по названию.
+- Добавил статус загрузки и отображение ошибок при запросах к API.
+- Для визуального выделения тестов привязал цветовую кодировку к сайтам.
 
-## Expanding the ESLint configuration
+### В процессе работы я добавил несколько своих решений:
+- Оптимизировал рендеринг, чтобы избежать ненужных обновлений компонентов.
+- Продумал UX, добавив анимации загрузки и улучшенный поиск.
+- Настроил адаптивность, чтобы интерфейс корректно работал на разных экранах.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
